@@ -1,0 +1,9 @@
+<my-slider-pane [activePane]="isLeftVisible ? 'left' : 'right'">
+  <div leftPane>
+      <us-map (onSelectState)="onChangeState($event)"></us-map>
+  </div>
+  <div rightPane>
+      <button mat-button (click)="clickBack()">Back</button>
+      <app-state-card [state]="state"></app-state-card>
+  </div>
+</my-slider-pane>
